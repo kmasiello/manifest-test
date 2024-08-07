@@ -1,0 +1,11 @@
+---
+title: "aux"
+format: html
+---
+
+Here is an auxiliary document that I did not specify in the manifest. It has broken code in it so it will not render. However, if Connect pulls this document in from a git-backed deployment as part of the bundle, it will try to execute it and the deployment will fail.
+
+```{r}
+here's a chunk that won't run.
+```
+

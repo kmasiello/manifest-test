@@ -1,0 +1,16 @@
+---
+title: "main"
+format: html
+---
+
+Here is the document I want to deploy using git-backed deployment. I wrote the manifest with
+
+```{r}
+#| eval: false
+
+rsconnect::writeManifest(appFiles = "main.qmd")
+
+```
+
+I specifically did not include "aux/aux.qmd" however when I git-back deploy from Connect, it will pull in all of the files in the repository _and attempt to run them all_. This will cause the deployment to fail because "aux.qmd" has broken code in it.
+
